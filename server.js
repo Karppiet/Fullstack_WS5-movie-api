@@ -79,7 +79,7 @@ app.put("/api/movies/:id", async (req, res) => {
 
 // DELETE /api/movies/:id - delete movie
 
-app.delete("api/movies/:id", async (req, res) => {
+app.delete("/api/movies/:id", async (req, res) => {
   try {
     const movie = Movie.findByIdAndDelete(req.params.id);
     if (!movie) {
